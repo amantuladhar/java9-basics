@@ -1,4 +1,4 @@
-# Java Module Using exports
+# Java Module Using `exports` and `requires`
 
 ## Create modules
 For this example we will create two modules: `com.moduleone` and `com.moduletwo`
