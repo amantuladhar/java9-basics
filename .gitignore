@@ -1,0 +1,4 @@
+*.class
+mods/
+build/
+target/
