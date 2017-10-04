@@ -17,7 +17,7 @@ public class ModuleOne {
         System.out.println("Hello from module one");
     }
 }
-```
+```java
 
 ## `com.moduletwo` code
 Create a class that will uses code from `com.moduleone`
@@ -31,4 +31,4 @@ public class ModuleTwo {
         ModuleOne.callme();
     }
 }
-```
+```java
