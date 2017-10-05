@@ -115,5 +115,7 @@ public class ModuleThree {
 ```
 Compile and run the code: `./run.sh com.modulethree ModuleThree` and your code will compile successfully and show the result as well.
 
+> NOTE: You can also export your modules to multiple modules by using comma (,) to separate them.
+
 ## **Conclusion**
 You can see the power of using `exports` with `to` here. If you want your code to be visible to only certain modules you can do that easily.
