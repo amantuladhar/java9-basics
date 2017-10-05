@@ -37,7 +37,7 @@ package com.moduletwo;
 public class ModuleTwo{}
 ```
 
-In `com.moduletwo` we declared that we required `com.moduleone` but we are not using it. But for this sake of this example let's assume `com.moduleone` is using `com.moduleone` code.
+In `com.moduletwo` we declared that we required `com.moduleone` but we are not using it. But for this sake of this example let's assume `com.moduletwo` is using `com.moduleone` code.
 
 Now to the fun part!!
 Create a third module `com.modulethree`
