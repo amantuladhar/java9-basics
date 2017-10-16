@@ -1,12 +1,12 @@
-package com.user;
+package com.usertwo;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-public class User {
+// This class cannot use reflection API for com.exporter.Exported
+public class UserTwo {
     public static void main(String[] args) throws Exception{
-    
         Class<?> exportedClass = Class.forName("com.exported.Exported");
         Constructor<?> con = exportedClass.getDeclaredConstructor();
         con.setAccessible(true);
@@ -21,9 +21,5 @@ public class User {
         m = exportedObj.getClass().getDeclaredMethod("callMePrivate");
         m.setAccessible(true);
         System.out.println("Private : " + m.invoke(exportedObj));
-        
-        // m = exportedObj.getClass().getDeclaredMethod("callMePrivateStatic");
-        // m.setAccessible(true);
-        // System.out.println("Private Static : " + m.invoke(exportedObj));
     }
 }

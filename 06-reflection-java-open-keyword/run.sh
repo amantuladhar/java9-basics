@@ -1,5 +1,7 @@
 #!/bin/sh
 
+rm -rf mods
+
 moduleName=$1
 mainFile=$2
 sourceDir=${3:-src}
@@ -14,13 +16,14 @@ fi
 echo "javac -d $moduleCompileDir --module-path ./jars/ --module-source-path $sourceDir \$(find $sourceDir -name \"*.java\")"
 javac -d $moduleCompileDir --module-path ./jars/ --module-source-path $sourceDir $(find $sourceDir -name "*.java") 
 
+
 # Given module name and main class file you run the application
 if [[ $mainFile == *"."* ]]; then
     echo "java --module-path ./jars/:$moduleCompileDir -m $moduleName/$mainFile"
-    echo "\n"
+    echo "\n--- OUTPUT ---"
     java --module-path ./jars/:$moduleCompileDir -m $moduleName/$mainFile
 else
     echo "java --module-path ./jars/:$moduleCompileDir -m $moduleName/$moduleName.$mainFile"
-    echo "\n"
+    echo "\n--- OUTPUT ---"
     java --module-path ./jars/:$moduleCompileDir -m $moduleName/$moduleName.$mainFile
 fi

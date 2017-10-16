@@ -1,3 +1,3 @@
-module com.user {
+module com.usertwo {
     requires com.exported;
 }
